@@ -1,0 +1,25 @@
+<svg id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.223 47.252">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3a5a98;
+      }
+
+      .cls-2 {
+        fill: #345387;
+      }
+
+      .cls-3 {
+        fill: #2e4d72;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <ellipse id="Ellipse_28" data-name="Ellipse 28" class="cls-1" cx="23.608" cy="23.608" rx="23.608" ry="23.608" transform="translate(0 0)"/>
+  <path id="Tracé_544" data-name="Tracé 544" class="cls-2" d="M102.992,69.754A23.609,23.609,0,0,1,69.6,103.142Z" transform="translate(-62.684 -62.805)"/>
+  <path id="Tracé_545" data-name="Tracé 545" class="cls-3" d="M197.226,109.316,180.148,92.238l-8.867,8.867.528.528-5.048,5.048,4.132,4.132-.543.543,4.473,4.473-5.157,5.157,8.81,8.81A23.623,23.623,0,0,0,197.226,109.316Z" transform="translate(-150.163 -83.049)"/>
+  <path id="Tracé_546" data-name="Tracé 546" class="cls-4" d="M169.468,98.6v3.959h-2.9V107.4h2.9v14.386h5.958V107.4h4s.375-2.322.556-4.86h-4.531V99.231a1.406,1.406,0,0,1,1.292-1.16h3.247v-5.04h-4.414C169.32,93.031,169.468,97.877,169.468,98.6Z" transform="translate(-149.987 -83.763)"/>
+</svg>

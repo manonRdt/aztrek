@@ -1,0 +1,779 @@
+/* font-family: 'Ubuntu', sans-serif;
+font-family: 'East Sea Dokdo', cursive;
+jaune-clair: #F1E4B2
+jaune-fonce: #F4C55C
+vert: #6B702E
+marron: #564A02
+gris-clair: #EFEFEF
+gris: #252525
+*/
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+  color: #252525;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo img {
+  width: 15rem;
+  padding: 1em 0.5em;
+}
+
+.btn {
+  color: #fff;
+  padding: 0.7em 0.9em;
+}
+
+/* ----------- FONT ------------- */
+
+h1 {
+  font-size: 1.562em;
+  color: #6B702E;
+}
+
+h2 {
+  font-size: 1.875em;
+  color: #6B702E;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s;
+}
+h2:hover{
+  color: #F4C55C;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 1.562em;
+  color: #FFF;
+  transition: 0.3s;
+}
+h3:hover{
+  color: #F4C55C;
+
+}
+
+h4 {
+  font-size: 1.125em;
+  color: #FFF;
+}
+
+p {
+  font-size: 0.875em;
+  margin: 0.5em 0;
+}
+
+.size-12 {
+  font-size: 0.75em;
+  margin-top: 0;
+}
+#pays li a {
+  font-family: 'East Sea Dokdo', cursive;
+  color: #6B702E;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+#pays li a:hover {
+  color: #F4C55C;
+}
+
+
+/**********************************/
+
+/* ----------- HEADER ----------- */
+
+/**********************************/
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#connexion {
+  font-size: 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../images/connexion.svg") no-repeat;
+}
+
+.burger {
+  font-size: 0;
+  display: inline-block;
+  width: 90px;
+  height: 50px;
+  background: url("../images/burger.svg") no-repeat;
+  order: 1;
+}
+
+.sidr {
+  width: 100vw;
+  box-shadow: none;
+}
+
+.sidr.right {
+  right: -100vw;
+  padding: 3rem;
+}
+
+.sidr-class-close-btn {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0;
+}
+
+.sidr-class-close-btn::after, .sidr-class-close-btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #252525;
+  left: 0;
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+
+.sidr-class-close-btn::after {
+  transform: rotate(-45deg);
+}
+
+#main-nav {
+  display: none;
+}
+
+#main-nav a, .sidr-inner a {
+  text-decoration: none;
+  color: #6B702E;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0 0.5em;
+  margin: 1em;
+}
+
+.sidr li ul li a {
+  display: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidr li:hover ul li a {
+  display: block;
+  color: #F4C55C;
+}
+
+.sidr-class-has-sub ul {
+  display: none;
+}
+
+#main-nav .sous-menu {
+  text-align: left;
+  background-color: #fff;
+  margin-top: 2px;
+  padding: 0.3em;
+  color: #6B702E;
+}
+#main-nav .sous-menu a{
+  transition: 0.3s;
+}
+
+#main-nav a:hover {
+  border-bottom: 2px solid #F4C55C;
+}
+
+#main-nav .sous-menu a:hover {
+  color: #F4C55C;
+  border-bottom: 0;
+}
+
+/* Header*/
+
+.header-page {
+  background: url("../images/bg-header.jpg") top no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+#header-info {
+  text-align: center;
+}
+
+/* Rechercher  */
+#recherche{
+  width: 18rem;
+  margin: 15em auto;
+}
+.search-form {
+  display: flex;
+  margin-top: 30px;
+  color: #6B702E;
+  background-color: rgba(229, 229, 229, 0.75);
+}
+
+.search-form input[type="text"] {
+  border: 0;
+  background: none;
+  font-size: 1em;
+  width: 20rem;
+  padding: 1rem 1.5rem;
+}
+
+.search-form input[type="text"]:focus {
+  background: rgba(229, 229, 229, 0.75);
+  outline-color: #fff;
+}
+#recherche input[placeholder] {
+  color: #6B702E;
+  font-weight: bold;
+}
+
+#recherche button[type="submit"] {
+  border: 0;
+  font-size: 0;
+  width: 2rem;
+  cursor: pointer;
+  background: url("../images/loupe.svg") no-repeat;
+}
+
+
+/* chat*/
+
+#chat {
+  background-color: #F4C55C;
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0.3em 0.8em;
+  transition: 0.3s;
+}
+
+.chat-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-info img {
+  margin: 0.3em 1em 0.3em 0;
+}
+.chat-info p{
+  color: #fff;
+}
+#chat-message{
+  display: none;
+  background-color: #fff;
+  width: 15rem;
+  margin: 0 auto;
+  color: #252525;
+}
+
+#chat:hover #chat-message {
+  display: flex;
+}
+
+#chat-message input{
+  padding: 0.2em;
+}
+
+#chat-message button[type="submit"] {
+  border: 0;
+  color: #fff;
+  background-color: #252525;
+  cursor: pointer;
+  font-size: 0.5em;
+}
+
+/**********************************/
+
+/* ----------- MAIN ------------- */
+
+/**********************************/
+
+/* BLOCK VOYAGE & COMMUNAUTE */
+
+.voyage, .communaute {
+  margin: 1em auto;
+  width: 18em;
+}
+
+.picto-communaute, .picto-voyage {
+  font-size: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0.2rem;
+}
+
+/* block voyage */
+
+.infos-voyage img {
+  /* position: absolute; */
+}
+
+.infos-voyage {
+  position: relative;
+  text-align: center;
+}
+
+.infos-voyage header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.picto-voyage {
+  background: url("../images/avion.svg") no-repeat;
+}
+
+.picto-niveau {
+  font-size: 0;
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  background: url("../images/niveau.svg") no-repeat;
+}
+
+.detail-voyage {
+  background-color: #EFEFEF;
+  text-align: left;
+  padding: 0.6em;
+  position: relative;
+}
+
+.detail-voyage h4 {
+  color: #6B702E;
+  margin: 0;
+}
+
+.voyage .btn {
+  background-color: #F4C55C;
+  position: absolute;
+  margin: 0.5em;
+  top: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+.voyage .btn:hover {
+  background-color: #6B702E;
+}
+
+.avis {
+  display: flex;
+  align-items: center;
+  margin: 1.5em auto 0.5em auto;
+}
+
+.star {
+  font-size: 0;
+  display: block;
+  width: 100px;
+  height: 20px;
+  margin-left: 2rem;
+  background: url("../images/note-star.svg") no-repeat;
+}
+
+/* block communauté */
+
+.communaute {
+  background-color: #F1E4B2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.picto-communaute {
+  background: url("../images/perso.svg") no-repeat;
+}
+
+.communaute h4 {
+  color: #252525;
+  margin: 0.5em;
+}
+
+.communaute .btn {
+  background-color: #252525;
+  margin: 1em 5em;
+  align-self: center;
+  transition: 0.3s;
+}
+
+.communaute .btn:hover {
+  background-color: #564A02;
+}
+
+/* prochains-departs */
+
+#prochains-departs .communaute .btn {
+  margin: 2em;
+}
+
+/* derniere-places */
+
+#date-evenement {
+  display: flex;
+  justify-content: center;
+}
+
+#date-evenement h4 {
+  margin: 0 0.5em;
+  color: #6B702E;
+}
+
+/* coup-coeur */
+
+/* destinations */
+
+#destinations {
+  background: url("../images/bg-destinations-mobil.jpg") center no-repeat;
+  background-size: cover;
+  padding: 1.25em 0;
+}
+#pays ul{
+  padding: 0;
+}
+#pays li a {
+  display: flex;
+  align-items: center;
+  padding: 0.8em;
+  justify-content: space-between;
+}
+
+#pays li a:before {
+  content: '';
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  background: url("../images/pays-costarica.svg") no-repeat;
+}
+
+#pays li:nth-of-type(2) a:before {
+  background: url("../images/pays-guatemala.svg") no-repeat;
+}
+
+#pays li:nth-of-type(3) a:before {
+  background: url("../images/pays-honduras.svg") no-repeat;
+}
+
+#pays li:nth-of-type(4) a:before {
+  background: url("../images/pays-mexique.svg") no-repeat;
+}
+
+#pays li:nth-of-type(5) a:before {
+  background: url("../images/pays-salvador.svg") no-repeat;
+}
+
+#pays p {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+#info-maps {
+  width: 320px;
+  margin: 1.25em auto;
+}
+
+#info-maps p {
+  background-color: #EFEFEF;
+  padding: 1em;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+iframe {
+  width: 320px;
+}
+
+#destinations .communaute {
+  background-color: #EFEFEF;
+  width: 20em;
+}
+
+/* souvenirs */
+
+#souvenirs h1 {
+  font-family: 'East Sea Dokdo', cursive;
+  text-align: center;
+  font-size: 3.75em;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#souvenirs h1:hover {
+color: #F4C55C;
+}
+#souvenirs p {
+  text-align: center;
+  padding: 0.5em;
+}
+#hashtag-aztrek {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#hashtag-aztrek, .photo-souvenirs {
+  margin: 1em auto;
+  width: 18em;
+}
+
+#hashtag-aztrek .btn {
+  background-color: #F4C55C;
+  margin: 0 5em;
+  align-self: center;
+  transition: 0.3s;
+}
+
+#hashtag-aztrek .btn:hover {
+  background-color: #6B702E;
+}
+
+.photo-souvenirs {
+  position: relative;
+}
+
+.post {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.post img, #post-blog img {
+  margin: 0.8em;
+}
+
+#post-blog {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.communaute .post {
+  background-color: #F1E4B2;
+}
+
+/**********************************/
+
+/* ----------- FOOTER ----------- */
+
+/**********************************/
+
+footer {
+  background-color: #252525;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#social-nav {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+
+#social-nav li {
+  margin: 0.9em;
+}
+
+#social-nav li a {
+  font-size: 0;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url("../images/facebook.svg") no-repeat;
+}
+
+#social-nav li:nth-of-type(2) a {
+  background: url("../images/twitter.svg") no-repeat;
+}
+
+#social-nav li:nth-of-type(3) a {
+  background: url("../images/instagram.svg") no-repeat;
+}
+
+#social-nav li:nth-of-type(4) a {
+  background: url("../images/youtube.svg") no-repeat;
+}
+
+#newsletter{
+  background-color: #F1E4B2;
+  width: 18rem;
+  margin: 0 auto;
+  color: #252525;
+}
+
+
+#newsletter button[type="submit"] {
+  border: 0;
+  background-color: #F1E4B2;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+.contact p:nth-of-type(3) {
+  margin-top: 2em;
+}
+
+footer .logo img {
+  margin: 0 auto;
+}
+
+footer p {
+  padding: 0.3em;
+  margin-bottom: 0;
+}
+/**********************************/
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/**********************************/
+/* ----------- Tablette----------- */
+@media only screen and (min-width: 768px) {
+  .display-voyage {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .communaute {
+    width: 80%;
+  }
+  .communaute .btn {
+    width: 10em;
+  }
+  /* derniere-places */
+  #derniere-places .display-voyage {
+    flex-direction: row-reverse;
+  }
+  /* coup-coeur */
+  #coup-coeur .voyage {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 39.75em;
+  }
+  #coup-coeur .voyage .btn {
+    position: absolute;
+    margin: 0.5em;
+    top: auto;
+    right: auto;
+    left: auto;
+  }
+  #coup-coeur .detail-voyage .avis:nth-of-type(1) {
+    margin-top: 5em;
+  }
+  /* destinations */
+  #destinations {
+    background: url("../images/bg-destinations-tablet.jpg") center no-repeat;
+    background-size: cover;
+  }
+  #pays li a {
+    padding: 0.8em 7em;
+  }
+  #info-maps {
+    width: 472px;
+  }
+  iframe {
+    width: 472px;
+  }
+  /* souvenirs */
+  .photo-souvenirs {
+    margin: 1em auto;
+  }
+  /* footer */
+  .footer-medias, .footer-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+/* ----------- Desktop----------- */
+  @media only screen and (min-width: 992px) {
+    /* NAV */
+    #main-nav {
+      display: block;
+    }
+    #main-nav .sous-menu {
+      position: absolute;
+      display: none;
+    }
+    #main-nav li:hover .sous-menu {
+      display: block;
+    }
+    .burger, .top-menu {
+      display: none;
+    }
+    .nav-desktop {
+      display: flex;
+    }
+    .nav-desktop ul li {
+      margin: 0.8em 0;
+    }
+    /* voyage */
+    .communaute {
+      width: 18em;
+    }
+    #prochains-departs .titre, #coup-coeur .titre {
+      text-align: left;
+      padding: 0 5em;
+    }
+    #derniere-places .titre {
+      text-align: right;
+      padding: 0 5em;
+    }
+    #destinations {
+      background: url("../images/bg-destinations-desktop.jpg") center no-repeat;
+      background-size: cover;
+    }
+    #pays ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    #pays li a {
+      display: block;
+      padding: 0.8em;
+    }
+    #maps {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #souvenirs .communaute {
+      width: 100%;
+    }

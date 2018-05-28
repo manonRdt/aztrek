@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Menu_Burger" data-name="Menu Burger" transform="translate(-15 -144)">
+    <rect id="Rectangle_62" data-name="Rectangle 62" class="cls-1" width="70" height="14" transform="translate(15 144)"/>
+    <rect id="Rectangle_63" data-name="Rectangle 63" class="cls-1" width="70" height="14" transform="translate(15 163)"/>
+    <rect id="Rectangle_64" data-name="Rectangle 64" class="cls-1" width="70" height="14" transform="translate(15 182)"/>
+  </g>
+</svg>

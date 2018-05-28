@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.374 15.529">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4c55c;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Niveau" transform="translate(-306 -1101)">
+    <path id="niveau-2" data-name="niveau" class="cls-1" d="M8.961,0,0,15.529H17.921Z" transform="translate(306 1101)"/>
+    <path id="niveau-3" data-name="niveau" class="cls-1" d="M8.961,0,0,15.529H17.921Z" transform="translate(323.613 1101)"/>
+    <path id="niveau-4" data-name="niveau" class="cls-2" d="M8.961,0,0,15.529H17.921Z" transform="translate(341.227 1101)"/>
+    <path id="niveau-5" data-name="niveau" class="cls-2" d="M8.961,0,0,15.529H17.921Z" transform="translate(358.84 1101)"/>
+    <path id="niveau-6" data-name="niveau" class="cls-2" d="M8.961,0,0,15.529H17.921Z" transform="translate(376.453 1101)"/>
+  </g>
+</svg>
