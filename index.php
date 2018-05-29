@@ -1,10 +1,16 @@
 <?php
 
 require_once 'fonctions/functions.php';
+require_once 'model/entity/sejour_entity.php';
+require_once 'model/entity/souvenirs_entity.php';
 require_once 'model/database.php';
 
 // Déclaration des variables
-$list_projects = getAllProjects(2);
+$list_sejour_date = getSejourByDate(2);
+$list_sejour_place = getSejourByPlace(2);
+$list_sejour_grade = getSejourByGrade(1);
+$place_restantes = $sejour["places_totale"] - $sejour["places_prise"];
+$list_souvenir = getAllSouvenir(6);
 
 getHeader("Accueil");
 ?>
@@ -12,7 +18,7 @@ getHeader("Accueil");
     <section id="prochains-departs" class="container">
       <h2 class="titre">Prochains départs</h2>
       <div class="display-voyage">
-         <?php foreach ($list_projects as $project) : ?>
+         <?php foreach ($list_sejour_date as $sejour) : ?>
             <?php include 'include/sejours_inc.php'; ?>
         <?php endforeach; ?>
         <article class="communaute">
@@ -27,7 +33,7 @@ getHeader("Accueil");
     <section id="derniere-places" class="container">
       <h2 class="titre">Dernières places</h2>
       <div class="display-voyage">
-         <?php foreach ($list_projects as $project) : ?>
+         <?php foreach ($list_sejour_place as $sejour) : ?>
             <?php include 'include/sejours_inc.php'; ?>
         <?php endforeach; ?>
         <article class="communaute">
@@ -47,7 +53,7 @@ getHeader("Accueil");
     <section id="coup-coeur" class="container">
       <h2 class="titre">Coups de coeur</h2>
       <div class="display-voyage">
-        <?php foreach ($list_projects as $project) : ?>
+        <?php foreach ($list_sejour_grade as $sejour) : ?>
             <?php include 'include/sejours_inc.php'; ?>
         <?php endforeach; ?>
         <article class="communaute">
@@ -61,7 +67,7 @@ getHeader("Accueil");
     </section>
 
     <section id="destinations">
-<?php getDestinations(); ?>
+    <?php require_once 'include/destinations_inc.php'; ?>
       <div id="maps" class="container">
         <article id="info-maps">
           <p>Tous les endroits coups de coeur de la communauté</p>
@@ -85,9 +91,11 @@ getHeader("Accueil");
           <p>Découvrez les photos et vidéos postés par les membres de la communauté sur les réseaux sociaux !</p>
           <a href="#" class="btn">En savoir plus</a>
         </article>
-         <?php foreach ($list_projects as $project) : ?>
+          <article class="photo-souvenirs">
+         <?php foreach ($list_souvenir as $souvenir) : ?>
             <?php include 'include/souvenirs_inc.php'; ?>
         <?php endforeach; ?>
+              </article>
         <article class="communaute">
           <p class="picto-communaute">communauté</p>
           <h2>Comment bien préparer son voyage</h2>

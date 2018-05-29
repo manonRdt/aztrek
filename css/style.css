@@ -359,11 +359,22 @@ nav {
 }
 
 .picto-niveau {
-  font-size: 0;
-  display: inline-block;
-  width: 90px;
-  height: 30px;
-  background: url("../images/niveau.svg") no-repeat;
+  display: flex;
+  justify-content: center;
+}
+.picto1{
+    font-size: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  background: url("../images/niveau1.svg") no-repeat;
+}
+.picto0 {
+    font-size: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  background: url("../images/niveau0.svg") no-repeat;
 }
 
 .detail-voyage {
@@ -398,12 +409,23 @@ nav {
 }
 
 .star {
-  font-size: 0;
-  display: block;
-  width: 100px;
-  height: 20px;
+  display: flex;
+  justify-content: center;
   margin-left: 2rem;
-  background: url("../images/note-star.svg") no-repeat;
+}
+
+.star1 {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../images/note-star1.svg") no-repeat;
+}
+
+.star0 {
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../images/note-star0.svg") no-repeat;
 }
 
 /* block communauté */
@@ -471,8 +493,12 @@ nav {
   padding: 0.8em;
   justify-content: space-between;
 }
+.pays-picto{
+    width: 140px;
+    height: 140px;
+}
 
-#pays li a:before {
+/* #pays li a:before {
   content: '';
   display: inline-block;
   width: 140px;
@@ -494,7 +520,7 @@ nav {
 
 #pays li:nth-of-type(5) a:before {
   background: url("../images/pays-salvador.svg") no-repeat;
-}
+} */
 
 #pays p {
   text-align: center;

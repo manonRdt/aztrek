@@ -18,23 +18,19 @@ function getFooter(){
 function getMenu(){
     require_once 'layout/menu.php';
 }
-function getDestinations(){
-    require_once 'include/destinations_inc.php';
-}
 
-function getAllProjects(int $limit = 999){
+
+
+function getAllDestination(){
    /* @var $connection PDO */
     global $connection;
 
     $query = "SELECT *
-            FROM sejours
-            INNER JOIN depart ON depart.sejours_id = sejours.id
-            GROUP BY date_depart DESC
-            LIMIT :limit;";
+            FROM pays;";
 
     $stmt = $connection->prepare($query);
-    $stmt->bindParam(":limit", $limit, PDO::PARAM_INT);
     $stmt->execute();
 
     return $stmt->fetchAll();
 }
+
