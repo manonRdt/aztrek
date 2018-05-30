@@ -11,3 +11,37 @@ try {
     echo "Erreur de la connexion à la BDD";
 }
 
+// Inclure automatiquement les fichiers PHP positionnés dans le dossier "entity"
+$entity_dir = __DIR__ . "/entity/";
+$files = scandir($entity_dir);
+foreach ($files as $file) {
+    if (is_file($entity_dir . $file) && pathinfo($entity_dir . $file, PATHINFO_EXTENSION) == "php") {
+        require_once $entity_dir . $file;
+    }
+}
+
+function getOneEntity(string $table, int $id)
+{
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "SELECT * FROM $table WHERE id = :id;";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+
+    return $stmt->fetch();
+}
+
+function deleteEntity(string $table, int $id)
+{
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "DELETE FROM $table WHERE id = :id;";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+}

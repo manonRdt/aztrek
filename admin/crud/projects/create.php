@@ -6,38 +6,34 @@ $list_categories = getAllEntity("category");
 require_once '../../layout/header.php';
 ?>
 
-<h1>Nouveau projet</h1>
+<h1>Nouveau voyage</h1>
 
 <form action="create_query.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="title">Titre</label>
-        <input type="text" id="title" name="title" class="form-control">
+        <label for="nom">Titre</label>
+        <input type="text" id="nom" name="nom" class="form-control">
     </div>
     <div class="form-group">
-        <label for="picture">Photo</label>
-        <input type="file" id="picture" name="picture" accept="image/*" class="form-control">
+        <label for="photo_accueil">Photo</label>
+        <input type="file" id="photo_accueil" name="photo_accueil" accept="image/*" class="form-control">
     </div>
     <div class="form-group">
         <label for="description">Description</label>
         <textarea name="description" id="description" class="form-control"></textarea>
     </div>
     <div class="form-group">
-        <label for="price">Prix</label>
-        <input type="number" id="price" name="price" class="form-control">
+        <label for="prix">Prix</label>
+        <input type="number" id="prix" name="prix" class="form-control">
     </div>
     <div class="form-group">
-        <label for="date_start">Date de début</label>
-        <input type="date" id="date_start" name="date_start" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="date_end">Date de fin</label>
-        <input type="date" id="date_end" name="date_end" class="form-control">
+        <label for="depart">Date de début</label>
+        <input type="date" id="depart" name="depart" class="form-control">
     </div>
     <div class="form-group">
         <label for="category">Catégorie</label>
-        <select id="category" name="category_id" class="form-control">
-            <?php foreach ($list_categories as $category) : ?>
-                <option value="<?php echo $category["id"]; ?>">
+        <select id="category" name="category" class="form-control">
+            <?php foreach ($list_types as $category) : ?>
+                <option value="<?php echo $tcategory["id"]; ?>">
                     <?php echo $category["label"]; ?>
                 </option>
             <?php endforeach; ?>

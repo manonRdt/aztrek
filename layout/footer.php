@@ -4,10 +4,10 @@
       <article class="footer-medias">
         <nav>
           <ul id="social-nav">
-            <li><a href="www.facebook.com">Facebook</a></li>
-            <li><a href="www.twitter.com">Twitter</a></li>
-            <li><a href="www.instagram.com">Instagram</a></li>
-            <li><a href="www.youtube.com">Youtube</a></li>
+            <li><a href="http://www.facebook.com">Facebook</a></li>
+            <li><a href="http://www.twitter.com">Twitter</a></li>
+            <li><a href="http://www.instagram.com">Instagram</a></li>
+            <li><a href="http://www.youtube.com">Youtube</a></li>
           </ul>
         </nav>
         <form id="newsletter" class="search-form" action="#" method="get">
@@ -21,7 +21,7 @@
           <p>35000 RENNES</p>
           <p>01 23 45 67 89</p>
         </div>
-        <a class="logo" href="index.html"><img src="./images/logo-blanc.svg" alt="logo"></a>
+        <a class="logo" href="index.php"><img src="./images/logo-blanc.svg" alt="logo"></a>
         <div>
           <h3>Conditions</h3>
           <h3>Plan du site</h3>

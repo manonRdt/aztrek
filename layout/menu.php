@@ -1,13 +1,13 @@
     <nav class="container">
-      <a class="logo" href="index.html"><img src="./images/logo.svg" alt="logo"></a>
+      <a class="logo" href="index.php"><img src="./images/logo.svg" alt="logo"></a>
       <a class="burger" href="#sidr-main">Menu</a>
       <ul id="main-nav">
         <div class="top-menu">
           <a href="#" class="close-btn">Fermer</a>
         </div>
         <div class="nav-desktop">
-          <li><a href="index.html">Accueil</a></li>
-          <li class="has-sub"><a href="#">Voyages</a>
+          <li><a href="index.php">Accueil</a></li>
+          <li class="has-sub"><a href="voyage.php">Voyages</a>
             <ul class="sous-menu">
               <li><a href="#">Destinations</a></li>
               <li><a href="#">Circuits</a></li>

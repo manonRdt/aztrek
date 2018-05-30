@@ -9,8 +9,7 @@ require_once 'model/database.php';
 $list_sejour_date = getSejourByDate(2);
 $list_sejour_place = getSejourByPlace(2);
 $list_sejour_grade = getSejourByGrade(1);
-$place_restantes = $sejour["places_totale"] - $sejour["places_prise"];
-$list_souvenir = getAllSouvenir(6);
+$list_souvenir = getAllSouvenir(5);
 
 getHeader("Accueil");
 ?>
@@ -91,11 +90,9 @@ getHeader("Accueil");
           <p>Découvrez les photos et vidéos postés par les membres de la communauté sur les réseaux sociaux !</p>
           <a href="#" class="btn">En savoir plus</a>
         </article>
-          <article class="photo-souvenirs">
          <?php foreach ($list_souvenir as $souvenir) : ?>
             <?php include 'include/souvenirs_inc.php'; ?>
         <?php endforeach; ?>
-              </article>
         <article class="communaute">
           <p class="picto-communaute">communauté</p>
           <h2>Comment bien préparer son voyage</h2>

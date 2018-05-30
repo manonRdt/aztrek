@@ -4,7 +4,7 @@
   <ul> 
     <?php foreach ($list_pays as $pays) : ?>
     <li>
-        <a href="#"><img class="pays-picto" url="./uploads/<?php echo $pays["picto"] ?>"
+        <a href="#"><img class="pays-picto" src="./uploads/<?php echo $pays["picto"] ?>"
         ></a>
     </li>
     <?php endforeach; ?>

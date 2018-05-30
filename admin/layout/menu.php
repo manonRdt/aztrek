@@ -8,13 +8,13 @@
     <li class="nav-item">
         <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/members/">
             <i class="fa fa-users"></i>
-            Membres
+            Utilisateurs
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/projects/">
             <i class="fa fa-briefcase"></i>
-            Projets
+            Séjours
         </a>
     </li>
 </ul>
