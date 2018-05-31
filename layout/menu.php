@@ -9,9 +9,9 @@
           <li><a href="index.php">Accueil</a></li>
           <li class="has-sub"><a href="voyage.php">Voyages</a>
             <ul class="sous-menu">
-              <li><a href="#">Destinations</a></li>
-              <li><a href="#">Circuits</a></li>
-              <li><a href="#">Activités</a></li>
+              <li><a href="destination.php">Destinations</a></li>
+              <li><a href="circuit.php">Circuits</a></li>
+              <li><a href="activite.php">Activités</a></li>
             </ul>
           </li>
           <li class="has-sub"><a href="#">Communauté</a>

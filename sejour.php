@@ -2,6 +2,7 @@
 
 require_once 'fonctions/functions.php';
 require_once 'model/entity/sejour_entity.php';
+require_once 'model/entity/pays_entity.php';
 require_once 'model/database.php';
 
 if (!isset($_GET["id"]) || !is_numeric($_GET["id"])){

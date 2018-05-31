@@ -154,58 +154,7 @@ WHERE sejour.id = :id;";
     return $stmt->fetchAll();
 }
 
-function getAllActivite(int $id){
-   /* @var $connection PDO */
-    
-    global $connection;
-    
-    $query =  "SELECT 
-sejour.id,
-activite.*
-FROM sejour
-INNER JOIN activite ON activite.sejour_id = sejour.id
-WHERE sejour.id = :id;";
 
-    $stmt = $connection->prepare($query);
-    $stmt->bindParam(":id", $id);
-    $stmt->execute();
-
-    return $stmt->fetchAll();
-}
-
-function getAllPays(){
-   /* @var $connection PDO */
-    
-    global $connection;
-    
-    $query =  "SELECT 
-                *
-            FROM pays;";
-
-    $stmt = $connection->prepare($query);
-    $stmt->execute();
-
-    return $stmt->fetchAll();
-}
-
-function getAllPhotos(int $id){
-   /* @var $connection PDO */
-    
-    global $connection;
-    
-    $query =  "SELECT 
-sejour.id,
-sejour_photos.*
-FROM sejour_photos
-INNER JOIN sejour ON sejour_photos.sejour_id = sejour.id
-WHERE sejour.id = :id;";
-
-    $stmt = $connection->prepare($query);
-    $stmt->bindParam(":id", $id);
-    $stmt->execute();
-
-    return $stmt->fetchAll();
-}
 
 //ADMIN
 function insertSejour(string $nom, int $duree, int $prix, int $places_totale, int $pays_id, int $difficulte_id, string $photo_accueil, int $types_sejours_id, string $description) {
@@ -235,11 +184,11 @@ function updateSejour(int $id, string $nom, int $duree, int $prix, int $places_t
                 SET nom = :nom, 
                     duree = :duree, 
                     prix = :prix, 
-                    places_totales = :places_totale,
+                    places_totale = :places_totale,
                     pays_id = :pays_id,
                     difficulte_id = :difficulte_id, 
                     photo_accueil = :photo_accueil, 
-                    types_sejours_id = :types_sejours.id, 
+                    types_sejours_id = :types_sejours_id, 
                     description = :description
                 WHERE id = :id;";
 

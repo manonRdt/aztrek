@@ -1,4 +1,4 @@
-<?php $list_pays = getAllDestination ();?>
+<?php $list_pays = getAllPays ();?>
 <article id="pays" class="container">
   <h2>Destinations</h2>
   <ul> 

@@ -17,4 +17,10 @@
             Séjours
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/pays/">
+            <i class="fa fa-globe"></i>
+            Pays
+        </a>
+    </li>
 </ul>

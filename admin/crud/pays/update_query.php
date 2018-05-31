@@ -5,25 +5,19 @@ require_once '../../../model/database.php';
 // Récupérer les données du formulaire
 $id = $_POST["id"];
 $nom = $_POST["nom"];
-$duree = $_POST["duree"];
-$prix = $_POST["prix"];
-$places_totale = $_POST["places_totale"];
-$difficulte_id = $_POST["difficulte_id"];
-$types_sejours_id = $_POST["types_sejours_id"];
-$description = $_POST["description"];
 
-$sejour = getOneEntity("sejour", $id);
-$photo_accueil = !is_null($sejour["photo_accueil"]) ? $sejour["photo_accueil"] : ""; // Image présente avant update
+$pays = getOneEntity("pays", $id);
+$picto = !is_null($pays["picto"]) ? $pays["picto"] : ""; // Image présente avant update
 
 // Vérifier si l'utilisateur a uploadé un fichier
-if ($_FILES["photo_accueil"]["error"] == 0) {
-    $photo_accueil = $_FILES["photo_accueil"];
+if ($_FILES["picto"]["error"] == 0) {
+    $picto = $_FILES["picto"]["name"];
     // Déplacer le fichier uploadé
-    move_uploaded_file($_FILES["photo_accueil"], "../../../uploads/" . $photo_accueil);
+    move_uploaded_file($_FILES["picto"]["tmp_name"], "../../../uploads/" . $picto);
 }
 
 // Insertion des données en BDD
-updateSejour($nom, $duree, $prix, $places_totale, $difficulte_id, $photo_accueil, $types_sejours_id, $description);
+updatePays($id, $nom, $picto);
 
 // Redirection vers la liste
 header("Location: index.php");
