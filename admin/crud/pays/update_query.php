@@ -3,13 +3,17 @@
 require_once '../../../model/database.php';
 
 // Récupérer les données du formulaire
+$id = $_POST["id"];
 $nom = $_POST["nom"];
-$description = $_POST["description"];
+$duree = $_POST["duree"];
 $prix = $_POST["prix"];
-$depart = $_POST["depart"];
-$category = $_POST["category"];
+$places_totale = $_POST["places_totale"];
+$difficulte_id = $_POST["difficulte_id"];
+$types_sejours_id = $_POST["types_sejours_id"];
+$description = $_POST["description"];
 
-$photo_accueil = "";
+$sejour = getOneEntity("sejour", $id);
+$photo_accueil = !is_null($sejour["photo_accueil"]) ? $sejour["photo_accueil"] : ""; // Image présente avant update
 
 // Vérifier si l'utilisateur a uploadé un fichier
 if ($_FILES["photo_accueil"]["error"] == 0) {
@@ -19,7 +23,7 @@ if ($_FILES["photo_accueil"]["error"] == 0) {
 }
 
 // Insertion des données en BDD
-insertProject($nom, $photo_accueil, $description, $prix, $depart, $category);
+updateSejour($nom, $duree, $prix, $places_totale, $difficulte_id, $photo_accueil, $types_sejours_id, $description);
 
 // Redirection vers la liste
 header("Location: index.php");

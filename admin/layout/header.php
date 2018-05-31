@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables/media/css/jquery.dataTables.min.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/select2/dist/css/select2.min.css"/>        
+        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote.css"/>  
+        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote-bs4.css"/>  
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/dashboard.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/admin.css"/>
     </head>

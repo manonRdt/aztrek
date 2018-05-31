@@ -1,7 +1,7 @@
 <?php
 require_once '../../../model/database.php';
 
-$list_members = getAllMembers();
+$list_members = getAllEntity("user");
 
 require_once '../../layout/header.php';
 ?>

@@ -3,10 +3,6 @@
 <h1>Nouveau membre</h1>
 
 <form action="create_query.php" method="post" enctype="multipart/form-data">
-<!--    <div class="form-group">
-        <label for="civilite">Civilite</label>
-        <input type="text" id="civilite" name="civilite" class="form-control">
-    </div>-->
     <div class="form-group">
         <label for="lastname">Nom</label>
         <input type="text" id="lastname" name="lastname" class="form-control">

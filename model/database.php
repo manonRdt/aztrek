@@ -20,6 +20,18 @@ foreach ($files as $file) {
     }
 }
 
+function getAllEntity(string $table) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "SELECT * FROM $table;";
+
+    $stmt = $connection->prepare($query);
+    $stmt->execute();
+    
+    return $stmt->fetchAll();
+}
+
 function getOneEntity(string $table, int $id)
 {
     /* @var $connection PDO */
